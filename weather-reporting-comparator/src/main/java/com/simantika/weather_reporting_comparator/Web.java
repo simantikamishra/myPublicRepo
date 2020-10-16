@@ -1,6 +1,7 @@
 package com.simantika.weather_reporting_comparator;
 
 import java.sql.Driver;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
@@ -17,41 +18,56 @@ import org.testng.Assert;
 
 
 
+
 public class Web {
 	public static String tempWeb;
 	public static WebDriver driver;
 	public static WebElement displayedCity;
+	public static String[] arrOfStr;
 	public static String tempWebCalc() throws InterruptedException {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\siman\\git\\MobileAutomationFramework\\MobileAutomationFramework\\target\\test-classes\\chromedriver.exe");
 		 driver=new ChromeDriver();
 		driver.get("https://www.ndtv.com/");
 		driver.manage().window().maximize();
-		Thread.sleep(30000);
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[text()='No Thanks']")).click();
 		driver.findElement(By.id("h_sub_menu")).click();
-		Thread.sleep(20000);
+		Thread.sleep(3000);
 		WebElement weatherlink=driver.findElement(By.xpath("//a[text()='WEATHER']"));
 		weatherlink.click();
 		WebElement sBox=driver.findElement(By.id("searchBox"));
-		sBox.sendKeys("bhub");
-		WebElement selectCity=driver.findElement(By.xpath("//label[@for='Bhubaneswar']"));
-		selectCity.click();
+		sBox.sendKeys("benga");
+		WebElement selectCity=driver.findElement(By.id("Bengaluru"));
+		if(selectCity.isSelected())
+		{
+		}
+		else
+		{
+			selectCity.click();
+		}
+		
+			
+		
 		displayedCity=driver.findElement(By.className("outerContainer"));
 		WebDriverWait w=new WebDriverWait(driver,10);
 		w.until(ExpectedConditions.visibilityOf(displayedCity));
 		
-if(displayedCity.getAttribute("title").equals("Bhubaneswar"))
+if(displayedCity.getAttribute("title").equals("Bengaluru"))
 {		
 		WebElement tc=driver.findElement(By.className("temperatureContainer"));
 		tc.isDisplayed();
 		tempWeb=tc.getText();
+		//arrOfStr = tempWeb.split("?", 2); 
+		
 			
 		
 	}
-return displayedCity.getText()+tempWeb;
-}
-	
+//return displayedCity.getText()+tempWeb;
+return tempWeb;
+	}
+
+		//return displayedCity.getText()+tempWeb;
 	}
 
 

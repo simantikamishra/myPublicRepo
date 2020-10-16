@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.simantika.weather_reporting_comparator.ApiTest">
+      <class name="com.simantika.weather_reporting_comparator.WebTest">
         <methods>
-          <include name="getCityTemp"/>
+          <include name="validatePresenceCityandTemperature"/>
         </methods>
-      </class> <!-- com.simantika.weather_reporting_comparator.ApiTest -->
+      </class> <!-- com.simantika.weather_reporting_comparator.WebTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

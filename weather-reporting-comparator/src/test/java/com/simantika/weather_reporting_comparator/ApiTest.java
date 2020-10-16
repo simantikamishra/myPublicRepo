@@ -1,27 +1,36 @@
 package com.simantika.weather_reporting_comparator;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.jayway.jsonpath.JsonPath;
+
 import io.restassured.RestAssured;
+//import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class ApiTest {
+public class ApiTest extends WebTest {
 	
 	@Test
 	public void getCityTemp() {
 		// TODO Auto-generated method stub
 		Response response=RestAssured.given()
-        .baseUri("api.openweathermap.org/data/2.5/weather")
-        .queryParam("apiid","7fe67bf08c80ded756e598d6f8fedaea")
+        .baseUri("http://api.openweathermap.org")
+        .queryParam("appid","7fe67bf08c80ded756e598d6f8fedaea")
         .queryParam("q", "Bengaluru")
         .log().all()
         .when()
         .get("/data/2.5/weather").andReturn();
          response.then().log().all().extract().response();
-         String str1=response.getBody().asString();
-     	 System.out.println(str1);
-		
+         
+     	
+         Double Farenh = JsonPath.read(response.body().asString(), "$.coord.lon");
+         Double Celsius = JsonPath.read(response.body().asString(), "$.coord.lat");
+         System.out.println(Celsius);
+         System.out.println(Farenh);
+         
+		//Assert.assertEquals(Web.tempWeb, str1);
 		
 	}
 }
