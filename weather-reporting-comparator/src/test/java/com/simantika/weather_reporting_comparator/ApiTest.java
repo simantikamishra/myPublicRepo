@@ -29,9 +29,13 @@ public class ApiTest extends WebTest {
          Double Celsius = JsonPath.read(response.body().asString(), "$.coord.lat");
          System.out.println(Celsius);
          System.out.println(Farenh);
+         String temp1=Double. toString(Celsius);
+         String temp2=Double. toString(Farenh);
+         String temp3=temp1+" "+temp2;
          
-		//Assert.assertEquals(Web.tempWeb, str1);
-		
+         Assert.assertEquals(temp3,Web.tempWeb, "Temperature retrieved varies in web and API");
+	     	
+	
 	}
 }
 
