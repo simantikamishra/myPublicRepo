@@ -25,7 +25,7 @@ public class Web {
 	public static WebElement displayedCity;
 	public static String[] arrOfStr;
 	public static String tempWebCalc() throws InterruptedException {
-		// TODO Auto-generated method stub
+		
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\siman\\git\\MobileAutomationFramework\\MobileAutomationFramework\\target\\test-classes\\chromedriver.exe");
 		 driver=new ChromeDriver();
 		driver.get("https://www.ndtv.com/");
@@ -58,16 +58,16 @@ if(displayedCity.getAttribute("title").equals("Bengaluru"))
 		WebElement tc=driver.findElement(By.className("temperatureContainer"));
 		tc.isDisplayed();
 		tempWeb=tc.getText();
-		//arrOfStr = tempWeb.split("?", 2); 
+	
 		
 			
 		
 	}
-//return displayedCity.getText()+tempWeb;
+
 return tempWeb;
 	}
 
-		//return displayedCity.getText()+tempWeb;
+		
 	}
 
 
