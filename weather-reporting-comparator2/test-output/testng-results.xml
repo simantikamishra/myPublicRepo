@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="41729" started-at="2020-10-16T10:22:21Z" finished-at="2020-10-16T10:23:02Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="41729" started-at="2020-10-16T10:22:21Z" finished-at="2020-10-16T10:23:02Z">
+      <class name="com.simantika.weather_reporting_comparator.ApiTest">
+        <test-method status="FAIL" signature="getCityTemp()[pri:0, instance:com.simantika.weather_reporting_comparator.ApiTest@5c3bd550]" name="getCityTemp" duration-ms="2442" started-at="2020-10-16T10:22:21Z" finished-at="2020-10-16T10:22:23Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Temperature retrieved varies in web and API expected [12.98 77.6] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.98 77.6] but found [null]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.simantika.weather_reporting_comparator.ApiTest.getCityTemp(ApiTest.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCityTemp -->
+        <test-method status="PASS" signature="validatePresenceCityandTemperature()[pri:0, instance:com.simantika.weather_reporting_comparator.ApiTest@5c3bd550]" name="validatePresenceCityandTemperature" duration-ms="39240" started-at="2020-10-16T10:22:23Z" finished-at="2020-10-16T10:23:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePresenceCityandTemperature -->
+      </class> <!-- com.simantika.weather_reporting_comparator.ApiTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
