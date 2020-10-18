@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 16 15:04:03 IST 2020</td>
+<td>Started on:</td><td>Sun Oct 18 20:32:06 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>42 seconds (42345 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41525 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.simantika.weather_reporting_comparator.ApiTest.getCityTemp()'><b>getCityTemp</b><br>Test class: com.simantika.weather_reporting_comparator.ApiTest</td>
-<td><div><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [null] but found [12.98 77.6]
+<td title='com.simantika.weather_reporting_comparator.ApiTest.getCityTempAPI()'><b>getCityTempAPI</b><br>Test class: com.simantika.weather_reporting_comparator.ApiTest</td>
+<td><div><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.98 77.6] but found [null]
 	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.simantika.weather_reporting_comparator.ApiTest.getCityTemp(ApiTest.java:36)
+	at org.testng.Assert.failNotSame(Assert.java:772)
+	at org.testng.Assert.assertSame(Assert.java:723)
+	at com.simantika.weather_reporting_comparator.ApiTest.getCityTempAPI(ApiTest.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -109,13 +107,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div><a href='#' onClick='toggleBox("stack-trace1409342262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1409342262'><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [null] but found [12.98 77.6]
+<div class='stack-trace' id='stack-trace1409342262'><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.98 77.6] but found [null]
 	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.simantika.weather_reporting_comparator.ApiTest.getCityTemp(ApiTest.java:36)
+	at org.testng.Assert.failNotSame(Assert.java:772)
+	at org.testng.Assert.assertSame(Assert.java:723)
+	at com.simantika.weather_reporting_comparator.ApiTest.getCityTempAPI(ApiTest.java:39)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

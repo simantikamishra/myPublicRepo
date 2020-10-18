@@ -5,13 +5,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WebTest extends Web{
-
+Object Temp;
 	@Test
-	public void validatePresenceCityandTemperature() throws Exception
+	public Object validatePresenceCityandTemperature() throws Exception
 	{
-      String Temp=Web.tempWebCalc();
+      Temp=Web.tempWebCalc();
       System.out.println(Temp);
-		
+		return Temp;
 	}
 	
 }

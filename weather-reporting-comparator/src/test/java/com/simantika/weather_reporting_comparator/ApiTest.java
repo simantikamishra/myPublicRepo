@@ -13,7 +13,7 @@ import io.restassured.response.Response;
 public class ApiTest extends WebTest {
 	
 	@Test
-	public void getCityTemp() {
+	public void getCityTempAPI() throws InterruptedException {
 		// TODO Auto-generated method stub
 		Response response=RestAssured.given()
         .baseUri("http://api.openweathermap.org")
@@ -27,15 +27,20 @@ public class ApiTest extends WebTest {
      	
          Double Farenh = JsonPath.read(response.body().asString(), "$.coord.lon");
          Double Celsius = JsonPath.read(response.body().asString(), "$.coord.lat");
-         System.out.println(Celsius);
-         System.out.println(Farenh);
-         String temp1=Double. toString(Celsius);
-         String temp2=Double. toString(Farenh);
-         String temp3=temp1+" "+temp2;
+        System.out.println(Celsius);
+        System.out.println(Farenh);
+        String temp1=Double. toString(Celsius);
+        String temp2=Double. toString(Farenh);
+        String temp3=temp1+" "+temp2;
+        Object objAPITemp=temp3;
          
-         Assert.assertEquals(temp3,Web.tempWeb, "Temperature retrieved varies in web and API");
-	     	
-	
+        // Assert.assertEquals(Web.tempWeb,obj, "Temperature retrieved varies in web and API");
+	    Assert.assertSame(WebTest.tempWebCalc(), objAPITemp, "Temperature retrieved varies in web and API");	
+	     
+	     {
+	    	
+	     }
+	    	 
 	}
 }
 

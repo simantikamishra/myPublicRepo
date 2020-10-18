@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="42345" started-at="2020-10-16T09:34:03Z" finished-at="2020-10-16T09:34:45Z">
+  <suite name="Suite" duration-ms="41033" started-at="2020-10-18T15:36:34Z" finished-at="2020-10-18T15:37:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="42345" started-at="2020-10-16T09:34:03Z" finished-at="2020-10-16T09:34:45Z">
+    <test name="Test" duration-ms="41033" started-at="2020-10-18T15:36:34Z" finished-at="2020-10-18T15:37:15Z">
       <class name="com.simantika.weather_reporting_comparator.ApiTest">
-        <test-method status="FAIL" signature="getCityTemp()[pri:0, instance:com.simantika.weather_reporting_comparator.ApiTest@5c3bd550]" name="getCityTemp" duration-ms="2544" started-at="2020-10-16T09:34:03Z" finished-at="2020-10-16T09:34:06Z">
+        <test-method status="FAIL" signature="getCityTempAPI()[pri:0, instance:com.simantika.weather_reporting_comparator.ApiTest@5c3bd550]" name="getCityTempAPI" duration-ms="41017" started-at="2020-10-18T15:36:34Z" finished-at="2020-10-18T15:37:15Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Temperature retrieved varies in web and API expected [null] but found [12.98 77.6]]]>
+              <![CDATA[Temperature retrieved varies in web and API expected [12.98 77.6] but found [26℃
+79℉]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Temperature retrieved varies in web and API expected [null] but found [12.98 77.6]
+              <![CDATA[java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.98 77.6] but found [26℃
+79℉]
 at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at com.simantika.weather_reporting_comparator.ApiTest.getCityTemp(ApiTest.java:36)
+at org.testng.Assert.failNotSame(Assert.java:772)
+at org.testng.Assert.assertSame(Assert.java:723)
+at com.simantika.weather_reporting_comparator.ApiTest.getCityTempAPI(ApiTest.java:38)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -50,12 +50,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getCityTemp -->
-        <test-method status="PASS" signature="validatePresenceCityandTemperature()[pri:0, instance:com.simantika.weather_reporting_comparator.ApiTest@5c3bd550]" name="validatePresenceCityandTemperature" duration-ms="39760" started-at="2020-10-16T09:34:06Z" finished-at="2020-10-16T09:34:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatePresenceCityandTemperature -->
+        </test-method> <!-- getCityTempAPI -->
       </class> <!-- com.simantika.weather_reporting_comparator.ApiTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

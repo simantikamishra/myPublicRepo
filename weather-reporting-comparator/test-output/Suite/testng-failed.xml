@@ -5,7 +5,7 @@
     <classes>
       <class name="com.simantika.weather_reporting_comparator.ApiTest">
         <methods>
-          <include name="getCityTemp"/>
+          <include name="getCityTempAPI"/>
         </methods>
       </class> <!-- com.simantika.weather_reporting_comparator.ApiTest -->
     </classes>

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 16 12:28:38 IST 2020</td>
+<td>Started on:</td><td>Sun Oct 18 21:06:34 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38393 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41033 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,17 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.simantika.weather_reporting_comparator.ApiTest.getCityTemp()'><b>getCityTemp</b><br>Test class: com.simantika.weather_reporting_comparator.ApiTest</td>
-<td><div><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.9877.6] but found [null]
-	at com.simantika.weather_reporting_comparator.ApiTest.getCityTemp(ApiTest.java:35)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1409342262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1409342262'><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.9877.6] but found [null]
+<td title='com.simantika.weather_reporting_comparator.ApiTest.getCityTempAPI()'><b>getCityTempAPI</b><br>Test class: com.simantika.weather_reporting_comparator.ApiTest</td>
+<td><div><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.98 77.6] but found [26?
+79?]
+	at com.simantika.weather_reporting_comparator.ApiTest.getCityTempAPI(ApiTest.java:38)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1053856141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1053856141'><pre>java.lang.AssertionError: Temperature retrieved varies in web and API expected [12.98 77.6] but found [26?
+79?]
 	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.simantika.weather_reporting_comparator.ApiTest.getCityTemp(ApiTest.java:35)
+	at org.testng.Assert.failNotSame(Assert.java:772)
+	at org.testng.Assert.assertSame(Assert.java:723)
+	at com.simantika.weather_reporting_comparator.ApiTest.getCityTempAPI(ApiTest.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -112,20 +112,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
-<td>com.simantika.weather_reporting_comparator.ApiTest@5c3bd550</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.simantika.weather_reporting_comparator.ApiTest.validatePresenceCityandTemperature()'><b>validatePresenceCityandTemperature</b><br>Test class: com.simantika.weather_reporting_comparator.ApiTest</td>
-<td></td>
-<td>35</td>
+<td>41</td>
 <td>com.simantika.weather_reporting_comparator.ApiTest@5c3bd550</td></tr>
 </table><p>
 </body>
